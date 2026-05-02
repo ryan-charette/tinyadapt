@@ -76,18 +76,17 @@ If `matplotlib` is installed, it also writes figures under `reports/figures/`.
 
 ## Reports And Figures
 
-The full generated report lives at [reports/compression_report.md](reports/compression_report.md). The project also includes a pair of stable overview figures:
+The full generated report lives at [reports/compression_report.md](reports/compression_report.md). Current benchmark outputs were generated on CPU with randomly initialized reference weights and no external dataset downloads.
 
-![TinyAdapt model family](reports/figures/model_family.svg)
+### Results Snapshot
 
-![TinyAdapt benchmark workflow](reports/figures/benchmark_workflow.svg)
-
-After running the benchmark and report scripts, the README can also surface these generated result figures:
-
-- [Memory vs. accuracy](reports/figures/memory_vs_accuracy.png)
-- [Latency vs. accuracy](reports/figures/latency_vs_accuracy.png)
-- [Output drift by model](reports/figures/output_drift_by_model.png)
-- [Trainable parameters vs. accuracy](reports/figures/trainable_params_vs_accuracy.png)
+| Model | Storage | Reduction vs FP32 | Trainable Params | Mean Drift |
+| --- | ---: | ---: | ---: | ---: |
+| FP32 | 72.11 MB | 0.0% | 18,903,040 | 0.000000 |
+| FP16 | 36.07 MB | 50.0% | 0 | 0.000099 |
+| 4-bit | 11.36 MB | 84.2% | 0 | 0.019977 |
+| LoRA | 37.20 MB | 48.4% | 294,912 | 0.000099 |
+| QLoRA | 12.48 MB | 82.7% | 294,912 | 0.019977 |
 
 ## View Demo
 
