@@ -9,6 +9,9 @@ from tinyadapt.utils.stats import format_bytes
 
 def _maybe_write_figures(payload: dict[str, object], output_dir: Path) -> list[Path]:
     try:
+        import matplotlib
+
+        matplotlib.use("Agg")
         import matplotlib.pyplot as plt
     except ImportError:
         return []
