@@ -1,0 +1,138 @@
+{
+  "checkpoint": null,
+  "memory": [
+    {
+      "name": "fp32",
+      "total_parameters": 18903040,
+      "trainable_parameters": 18903040,
+      "storage_bytes": 75612160,
+      "reduction_vs_fp32": 0.0
+    },
+    {
+      "name": "fp16",
+      "total_parameters": 18903040,
+      "trainable_parameters": 0,
+      "storage_bytes": 37826560,
+      "reduction_vs_fp32": 49.97291440953413
+    },
+    {
+      "name": "int4",
+      "total_parameters": 18903040,
+      "trainable_parameters": 0,
+      "storage_bytes": 11911168,
+      "reduction_vs_fp32": 84.24702058504876
+    },
+    {
+      "name": "lora",
+      "total_parameters": 19197952,
+      "trainable_parameters": 294912,
+      "storage_bytes": 39006208,
+      "reduction_vs_fp32": 48.41278439869989
+    },
+    {
+      "name": "qlora",
+      "total_parameters": 19197952,
+      "trainable_parameters": 294912,
+      "storage_bytes": 13090816,
+      "reduction_vs_fp32": 82.68689057421452
+    }
+  ],
+  "drift": [
+    {
+      "name": "fp16",
+      "mean_absolute_difference": 9.927567589329556e-05,
+      "max_absolute_difference": 0.0005002021789550781,
+      "relative_error": 0.00012375555525068194
+    },
+    {
+      "name": "int4",
+      "mean_absolute_difference": 0.01997656375169754,
+      "max_absolute_difference": 0.09708372503519058,
+      "relative_error": 0.024788720533251762
+    },
+    {
+      "name": "lora",
+      "mean_absolute_difference": 9.927567589329556e-05,
+      "max_absolute_difference": 0.0005002021789550781,
+      "relative_error": 0.00012375555525068194
+    },
+    {
+      "name": "qlora",
+      "mean_absolute_difference": 0.01997656375169754,
+      "max_absolute_difference": 0.09708372503519058,
+      "relative_error": 0.024788720533251762
+    }
+  ],
+  "latency": [
+    {
+      "name": "fp32",
+      "batch_size": 16,
+      "mean_latency_ms": 13.660800002980977,
+      "std_latency_ms": 0.422137438929368,
+      "throughput_examples_per_second": 1171.234480887545
+    },
+    {
+      "name": "fp16",
+      "batch_size": 16,
+      "mean_latency_ms": 360.02254000341054,
+      "std_latency_ms": 15.796583416462855,
+      "throughput_examples_per_second": 44.441661902192095
+    },
+    {
+      "name": "int4",
+      "batch_size": 16,
+      "mean_latency_ms": 50.56188000016846,
+      "std_latency_ms": 5.133977031239885,
+      "throughput_examples_per_second": 316.44392969459784
+    },
+    {
+      "name": "lora",
+      "batch_size": 16,
+      "mean_latency_ms": 351.42789999663364,
+      "std_latency_ms": 9.221304969188616,
+      "throughput_examples_per_second": 45.52854227041525
+    },
+    {
+      "name": "qlora",
+      "batch_size": 16,
+      "mean_latency_ms": 54.35006000043359,
+      "std_latency_ms": 1.930071069726768,
+      "throughput_examples_per_second": 294.38789947743123
+    }
+  ],
+  "training": [
+    {
+      "model_name": "fp32",
+      "trainable_parameters": 18907140,
+      "validation_accuracy": 0.19791666666666666,
+      "final_loss": 1.576721986134847,
+      "seconds_per_epoch": 0.4914917499991134,
+      "loss_curve": [
+        11.817039834128487,
+        3.286594099468655
+      ]
+    },
+    {
+      "model_name": "lora",
+      "trainable_parameters": 299012,
+      "validation_accuracy": 1.0,
+      "final_loss": 0.052512197444836296,
+      "seconds_per_epoch": 20.78729569999996,
+      "loss_curve": [
+        1.0800902512338426,
+        0.08449606607771581
+      ]
+    },
+    {
+      "model_name": "qlora",
+      "trainable_parameters": 299012,
+      "validation_accuracy": 1.0,
+      "final_loss": 0.05253086114923159,
+      "seconds_per_epoch": 0.4680332999996608,
+      "loss_curve": [
+        1.0795532200071547,
+        0.0850836844700906
+      ]
+    }
+  ]
+}
