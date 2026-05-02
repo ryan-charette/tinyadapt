@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">TinyAdapt benchmark workflow</title>
+  <desc id="desc">Benchmark scripts produce memory, drift, latency, training, report, and figure outputs.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 8; }
+      .source { fill: #eef2ff; stroke: #4f46e5; }
+      .metric { fill: #ecfeff; stroke: #0891b2; }
+      .output { fill: #f0fdf4; stroke: #16a34a; }
+      .text { fill: #0f172a; font: 600 16px Arial, sans-serif; text-anchor: middle; }
+      .small { fill: #334155; font: 13px Arial, sans-serif; text-anchor: middle; }
+      .line { stroke: #64748b; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="300" />
+  <rect class="box source" x="32" y="95" width="180" height="92" />
+  <text class="text" x="122" y="130">Model Variants</text>
+  <text class="small" x="122" y="154">FP32, FP16, int4</text>
+  <text class="small" x="122" y="174">LoRA, QLoRA</text>
+  <path class="line" d="M212 141 H280" />
+  <rect class="box metric" x="280" y="32" width="160" height="72" />
+  <text class="text" x="360" y="62">Memory</text>
+  <text class="small" x="360" y="84">storage + params</text>
+  <rect class="box metric" x="280" y="116" width="160" height="72" />
+  <text class="text" x="360" y="146">Drift</text>
+  <text class="small" x="360" y="168">output fidelity</text>
+  <rect class="box metric" x="280" y="200" width="160" height="72" />
+  <text class="text" x="360" y="230">Latency</text>
+  <text class="small" x="360" y="252">CPU inference</text>
+  <rect class="box metric" x="500" y="116" width="160" height="72" />
+  <text class="text" x="580" y="146">Training</text>
+  <text class="small" x="580" y="168">synthetic task</text>
+  <path class="line" d="M440 68 H705 V118" />
+  <path class="line" d="M440 152 H500" />
+  <path class="line" d="M440 236 H705 V186" />
+  <path class="line" d="M660 152 H705" />
+  <rect class="box output" x="705" y="94" width="220" height="116" />
+  <text class="text" x="815" y="130">Report Outputs</text>
+  <text class="small" x="815" y="154">CSV + JSON tables</text>
+  <text class="small" x="815" y="174">compression_report.md</text>
+  <text class="small" x="815" y="194">figures/*.png</text>
+</svg>

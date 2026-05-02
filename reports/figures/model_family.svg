@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">TinyAdapt model family</title>
+  <desc id="desc">BigNet baseline branches into FP16, 4-bit, LoRA, and QLoRA variants.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 8; }
+      .primary { fill: #0f766e; stroke: #134e4a; }
+      .accent { fill: #eff6ff; stroke: #2563eb; }
+      .warm { fill: #fff7ed; stroke: #ea580c; }
+      .green { fill: #f0fdf4; stroke: #16a34a; }
+      .text { fill: #0f172a; font: 600 18px Arial, sans-serif; text-anchor: middle; }
+      .small { fill: #334155; font: 14px Arial, sans-serif; text-anchor: middle; }
+      .line { stroke: #64748b; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="360" />
+  <rect class="box primary" x="360" y="28" width="240" height="78" />
+  <text class="text" x="480" y="61" fill="#ffffff">FP32 BigNet</text>
+  <text class="small" x="480" y="86" fill="#ccfbf1">reference backbone</text>
+  <path class="line" d="M480 106 V146" />
+  <path class="line" d="M480 146 H150 V185" />
+  <path class="line" d="M480 146 H370 V185" />
+  <path class="line" d="M480 146 H590 V185" />
+  <path class="line" d="M480 146 H810 V185" />
+  <rect class="box accent" x="40" y="185" width="220" height="96" />
+  <text class="text" x="150" y="220">FP16 BigNet</text>
+  <text class="small" x="150" y="247">half-precision</text>
+  <text class="small" x="150" y="267">linear weights</text>
+  <rect class="box warm" x="260" y="185" width="220" height="96" />
+  <text class="text" x="370" y="220">4-bit BigNet</text>
+  <text class="small" x="370" y="247">packed int4 weights</text>
+  <text class="small" x="370" y="267">blockwise scales</text>
+  <rect class="box green" x="480" y="185" width="220" height="96" />
+  <text class="text" x="590" y="220">LoRA BigNet</text>
+  <text class="small" x="590" y="247">frozen base</text>
+  <text class="small" x="590" y="267">trainable adapters</text>
+  <rect class="box warm" x="700" y="185" width="220" height="96" />
+  <text class="text" x="810" y="220">QLoRA BigNet</text>
+  <text class="small" x="810" y="247">4-bit frozen base</text>
+  <text class="small" x="810" y="267">trainable adapters</text>
+  <text class="small" x="480" y="326">All variants expose the same forward interface: output = model(x)</text>
+</svg>
